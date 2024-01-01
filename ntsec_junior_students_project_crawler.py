@@ -7,6 +7,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from lxml import etree
 import time
+import json
+
+#載入 config 檔
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
 
 #設置 webdriver
 chrome_options = webdriver.ChromeOptions()
@@ -16,7 +21,7 @@ chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 
 #讀取我的 chromedriver 的位置，並設置 webdriver
-driver = webdriver.Chrome('/programing/swiftx/chromedriver-win64/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome(config['webdriver']['file_path'], options=chrome_options)
 
 #建立需使用的儲存容器
 #用於儲存所有科展作品的作品名稱
