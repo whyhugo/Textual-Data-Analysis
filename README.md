@@ -1,1 +1,1 @@
-# NTNU Textual-Data-Analysis (2023 Fall)
+# NTNU Textual-Data-Analysis (Fall 2023)
